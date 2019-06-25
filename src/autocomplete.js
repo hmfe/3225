@@ -16,8 +16,8 @@ class Autocomplete {
 
   setNode(el) {
     if (this.el) {
-      this.el.removeEventListener("input", this.onInput);
-      this.el.removeEventListener("keydown", this.debounceInput);
+      this.el.removeEventListener("input", this.debounceInput);
+      this.el.removeEventListener("keydown", this.onKeyDown);
     }
     this.el = el;
     this.el.addEventListener("input", this.debounceInput);
