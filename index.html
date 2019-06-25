@@ -2,13 +2,15 @@
 <head>
   <title>WORK TASK</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
-  <link href="main.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js" integrity="sha256-7/yoZS3548fXSRXqc/xYzjsmuW3sFKzuvOCHd06Pmps=" crossorigin="anonymous"></script>
 
-  <script src="autocomplete.js"></script>
-  <script src="historyList.js"></script>
-  <script src="script.js"></script>
+  <script src="src/autocomplete.js"></script>
+  <script src="src/autocompleteList.js"></script>
+  <script src="src/historyList.js"></script>
+  <script src="src/historyListItem.js"></script>
+  <script src="src/script.js"></script>
 </head>
 
 <body class="flex">
@@ -19,18 +21,7 @@
     <button class="input-text-reset btn-fab" type="reset">&times;</button>
   </form>
 
-  <ul class="divided-list" id="historyList">
-    <li class="flex flex-line">
-      <span class="flex-1 text-overflow">test string</span>
-      <time class="text-light text-small">12:00</time>
-      <button class="btn-fab">&times;</button>
-    </li>
-    <li class="flex flex-line">
-      <span class="flex-1 text-overflow">test string ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</span>
-      <time class="text-light text-small">12:00</time>
-      <button class="btn-fab">&times;</button>
-    </li>
-  </ul>
+  <ul class="divided-list" id="historyList"></ul>
 
   <button class="btn btn-big btn-icon btn-delete" onclick="searchList.removeAll()">Clear search history</button>
 </main>
