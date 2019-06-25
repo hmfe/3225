@@ -1,0 +1,37 @@
+@import "helpers.css";
+
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.autocomplete-strong {
+  font-weight: bold;
+}
+
+.autocomplete-items {
+  border: 1px solid var(--border-color-transparent);
+  border-bottom: none;
+  border-top: none;
+  left: 0;
+  position: absolute;
+  /*position the autocomplete items to be the same width as the container:*/
+  right: 0;
+  top: 100%;
+  z-index: 99;
+}
+
+.autocomplete-items div {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color-transparent);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.autocomplete-items div:hover {
+  background-color: var(--bg);
+}
+
+.autocomplete-active {
+  background-color: var(--primary-bg) !important;
+  color: white;
+}
