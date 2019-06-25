@@ -15,8 +15,7 @@ class AutocompleteList {
 
   render = () => {
     this.currentFocus = -1;
-    this.list = document.createElement("DIV");
-    this.list.setAttribute("class", "autocomplete-items");
+    this.list = createElement("DIV", "", "autocomplete-items");
     for (const option of this.options) {
       if (option.substr(0, this.value.length).toUpperCase() === this.value.toUpperCase()) {
         this.list.appendChild(this.renderListItem(option));
@@ -26,14 +25,9 @@ class AutocompleteList {
   };
 
   renderListItem = (option) => {
-    const resultLine = document.createElement("DIV");
-
-    const highlightPart = document.createElement("span");
-    highlightPart.setAttribute("class", "autocomplete-strong");
-    highlightPart.innerText = option.substr(0, this.value.length);
-
-    const restPart = document.createElement("span");
-    restPart.innerText = option.substr(this.value.length);
+    const resultLine = createElement("DIV");
+    const highlightPart = createElement("SPAN", option.substr(0, this.value.length), "autocomplete-strong");
+    const restPart = createElement("SPAN", option.substr(this.value.length));
 
     resultLine.appendChild(highlightPart);
     resultLine.appendChild(restPart);

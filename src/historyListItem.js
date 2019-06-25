@@ -10,20 +10,12 @@ class HistoryListItem {
   }
 
   render = () => {
-    const line = document.createElement("LI");
-    line.setAttribute("class", "flex flex-line");
+    const prettyTime = this.item.date.toISOString().substring(0, 10) + ", " + this.item.date.toTimeString().substring(0, 5);
 
-    const value = document.createElement("SPAN");
-    value.setAttribute("class", "flex-1 text-overflow");
-    value.innerText = this.item.title;
-
-    const time = document.createElement("TIME");
-    time.setAttribute("class", "text-light text-small");
-    time.innerHTML = this.item.date.toISOString().substring(0, 10) + ", " + this.item.date.toTimeString().substring(0, 5);
-
-    const button = document.createElement("BUTTON");
-    button.setAttribute("class", "btn-fab");
-    button.innerHTML = "&times;";
+    const line = createElement("LI", "", "flex", "flex-line");
+    const value = createElement("SPAN", this.item.title, "flex-1", "text-overflow");
+    const time = createElement("TIME", prettyTime, "text-light", "text-small");
+    const button = createElement("BUTTON", "&times;", "btn-fab");
     button.addEventListener("click", this.onDelete);
 
     line.appendChild(value);

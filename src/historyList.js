@@ -47,28 +47,14 @@ class HistoryList {
   };
 
   renderHeader = () => {
-    const line = document.createElement("LI");
-    line.setAttribute("class", "flex flex-line");
-
-    const title = document.createElement("H1");
-    title.setAttribute("class", "flex-1");
-    title.innerHTML = "Search history";
-
-    const button = document.createElement("A");
-    button.setAttribute("class", "text-small");
-    button.innerHTML = "Clear search history";
+    const line = createElement("LI", "", "flex", "flex-line");
+    const title = createElement("H1", "Search history", "flex-1");
+    const button = createElement("A", "Clear search history", "text-small");
     button.addEventListener("click", () => this.removeAll());
-
     line.appendChild(title);
     line.appendChild(button);
-
     return line;
   };
 
-  renderPlaceholder = () => {
-    const line = document.createElement("LI");
-    line.setAttribute("class", "flex flex-line");
-    line.innerHTML = "Search history is empty";
-    return line;
-  };
+  renderPlaceholder = () => createElement("LI", "Search history is empty", "flex", "flex-line");
 }
