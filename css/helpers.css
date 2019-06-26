@@ -1,0 +1,36 @@
+:root {
+  --border-color: #808080;
+  --border-color-transparent: rgba(128, 128, 128, 0.6);
+  --primary-bg: #F0A558;
+  --bg: #F4F4F4;
+  --bg-dark: var(--border-color);
+  --text: #555;
+  --light-text: #9e9e9e;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-line {
+  flex-direction: row;
+}
+
+.flex-1 {
+  flex-grow: 1;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-light {
+  color: var(--light-text);
+}
+
+.text-small {
+  font-size: 80%;
+}

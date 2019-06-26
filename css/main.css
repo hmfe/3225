@@ -1,0 +1,64 @@
+@import "helpers.css";
+@import "buttons.css";
+@import "autocomplete.css";
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  flex-direction: column;
+  font-family: Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 400px;
+  padding: 10px;
+}
+
+header, footer {
+  background-color: var(--bg-dark);
+  box-sizing: border-box;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: var(--text);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.divided-list {
+  padding: 20px;
+}
+.divided-list li {
+  border-bottom: 1px solid var(--border-color-transparent);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+time {
+  margin: 0 5px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-color: var(--border-color-transparent);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.input-text-reset {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -12px;
+}
